@@ -3,8 +3,8 @@ project "GLFW"
     kind "StaticLib"
     configurations { "Debug", "Shipping" }
 
-    targetdir ("Binaries/" .. binarydir .. "/%{prj.name}")
-    objdir ("Intermediate/" .. binarydir .. "/%{prj.name}")
+    targetdir ("Binaries/" .. BinaryDirectory .. "/%{prj.name}")
+    objdir ("Intermediate/" .. BinaryDirectory .. "/%{prj.name}")
 
     files
     {
