@@ -1,8 +1,16 @@
 project "GLFW"
 	language "C"
 	staticruntime "Off"
-	kind "StaticLib"
 	configurations { "Debug", "Shipping" }
+
+	configuration "static-build"
+        kind "StaticLib"
+
+    configuration "not static-build"
+		kind "SharedLib"
+		defines { "_GLFW_BUILD_DLL" }
+
+	configuration {}
 
 	targetdir (BinaryDirectory)
 	objdir (IntermediateDirectory)
